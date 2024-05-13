@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--; //9
+        document.write(num1, "<br>");
+
+        num1++; //10
+        document.write(num1, "<br>");
+
+        result = num2++; //result:20, num2:21
+        document.write(result, "<br>");
+
+        result = ++num2; //result:22, num2:22
+        document.write(result, "<br>");
+    </script>
+    <script>
+        var n1 = 10;
+        var n2 = (n1--)+12; //n1--는 다음줄에서 감소하기 때문에 아직 10인 상태로 12랑 더해서 22
+        document.write(n1, "<br>"); //9
+        document.write(n2); //22
+    </script>
+</body>
+</html>
