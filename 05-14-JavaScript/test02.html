@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var money;
+      var a = 500;
+      var b = 700;
+      var c = 400;
+      var i, j, k;
+      var money = Number(prompt('현재 소유한 돈?', '0'));
+      for (i = 1; i < money/a; i++) {
+        for (j = 1; j < money/b; j++) {
+          for (k = 1; k < money/c; k++) {
+            if (i * a + j * b + k * c == money) {
+              document.write(
+                '크림빵' + a +'개','새우깡' + b +'개','콜라' + c + '개'
+              );
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
