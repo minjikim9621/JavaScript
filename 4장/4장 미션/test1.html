@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+          var info = [
+          var i;
+              이름:'Nature of Code',
+              가격:30000,
+              저자:'Daniel Shifman',
+              ISBM:9788968481901,
+              페이지:620
+      ];
+          document.write(info[i],"<br>");
+    </script>
+    <script>
+      let name = [
+      name.push{ 이름: '일벌레', 미네랄: 50, 가스: 0, 보급품: 1 };
+      name.push{ 이름: '여왕', 미네랄: 150, 가스: 0, 보급품: 2 };
+      name.push{ 이름: '바퀴', 미네랄: 75, 가스: 25, 보급품: 2 };
+      name.push{ 이름: '히드라리스크', 미네랄: 100, 가스: 50, 보급품: 2 };
+      name.push{ 이름: '타락귀', 미네랄: 150, 가스: 100, 보급품: 2 };
+      document.write(name)];
+    </script>
+    <script>
+      var studentScore = [
+        { studentName: '홍길동', score: 65 },
+        { studentName: '이순신', score: 75 },
+        { studentName: '고길동', score: 83 },
+        { studentName: '유관순', score: 67 },
+        { studentName: '홍길순', score: 65 },
+      ];
+      var max = 0;
+      var topStudent = '';
+      for (var i = 0; i < studentScore.length; i++) {
+        if (studentScore[i].score > max) {
+          max = studentScore[i].score;
+          topStudent = studentScore[i].studentName;
+        }
+      }
+      document.write('가장 높은 점수를 받은 학생: ' + topStudent, '<br>');
+    </script>
+    <script>
+      for (var i = 1; i <= 9; i++) {
+        document.write('3 * ' + i + '=' + 3 * i, '<br>');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

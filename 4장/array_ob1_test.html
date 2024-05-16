@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 배열객체 </title>
+<script>
+    //방식 1번
+    /* var arr = new Array();
+     arr[0] = 30;
+     arr[1] = "따르릉";
+     arr[2] = true; */
+
+     //방식 2번
+    //var arr = new Array(30,"따르릉",true);
+    
+    var arr = [30, "따르릉", true]; //방식 3번
+
+    document.write("<h3>배열값 가져오기-1</h3>");
+    document.write(arr[0], "<br>");
+    document.write(arr[1], "<br>");
+    document.write(arr[2], "<br>");
+
+    document.write("<h3>배열값 가져오기-2</h3>");
+    for(var i = 0; i < arr.length; i++) {
+        document.write(arr[i], "<br>");
+    }
+    document.write("<h3>배열값 가져오기-3</h3>");
+    for(i in arr) {
+        document.write(arr[i], "<br>"); //배열값 가져올 때 가장 많이 쓰임
+    }
+</script>
+<script>
+    var city = ["서울","부산","인천"];
+    function printArray()
+        var i;
+    for(i=0; i<city.length; i++)
+    document.write(city[i], "<br>");
+    printArray();
+</script>
+</head>
+<body>
+</body>
+</html>

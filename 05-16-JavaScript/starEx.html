@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 오른쪽 방향,역방향
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+          document.write('&nbsp'); //공백찍기
+        }
+        for (let j = 5; j > i; j--) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+      //왼쪽 방향,역방향
+      for (let i = 0; i < 5; i++) {
+        for (let j = 5; j > i; j--) {
+          document.write('*');
+        }
+        for (let j = 0; j <= i; j++) {
+          document.write('&nbsp'); //공백찍기
+        }
+        document.write('<br>');
+      }
+
+      //별 1개부터 5개까지 왼쪽 정렬
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+
+      //별 1개부터 5깨까지 오른쪽 정렬
+      for (var i = 0; i < 5; i++) {
+        for (var j = 4; j > i; j--) {
+          document.write('&nbsp');
+        }
+
+        for (var k = 0; k <= i; k++) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+      document.write('<br>');
+
+      //다이아몬드
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 4; j > i; j--) {
+          document.write('&nbsp');
+        }
+
+        for (var k = 0; k <= i; k++) {
+          document.write('*');
+        }
+
+        for (var l = 1; l <= i; l++) {
+          document.write('*');
+        }
+
+        document.write('<br>');
+      }
+
+      for (var i = 0; i < 4; i++) {
+        for (var j = 0; j <= i; j++) {
+          document.write('&nbsp');
+        }
+
+        for (var k = 4; k > i; k--) {
+          document.write('*');
+        }
+
+        for (var l = 3; l > i; l--) {
+          document.write('*');
+        }
+
+        document.write('<br>');
+      }
+
+      document.write('<br>');
+    </script>
+  </head>
+  <body></body>
+</html>

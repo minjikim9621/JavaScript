@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //#region 1번
+      for (i = 0; i < 10; i = i + 2) {
+        document.write(i, '<br>');
+      }
+      //#endregion
+    </script>
+    <script>
+      //#region 2번
+      var sum = 0;
+      for (var i = 1; i < 20; i++) {
+        if (i % 2 !== 0 || i % 3 !== 0) {
+          continue;
+        }
+        sum += i;
+        // sum = sum + i
+      }
+      document.write(sum, '<br>');
+      //#endregion
+    </script>
+    <script>
+      //#region 3번
+      for (let i = 1; i < 7; i++) {
+        for (let j = 1; j < 7; j++) {
+          if (i + j === 6) document.write([i, j], '<br>');
+        }
+      } //#endregion
+    </script>
+    <script>
+      //#region 4번
+      var today = new Date();
+      var nowYear = today.getFullYear();
+
+      var theDate = new Date(nowYear, 10, 08);
+      var diffDate = theDate.getTime() - today.getTime();
+
+      var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
+      document.write('<h1>오늘부터 수료일까지 남은 날짜</h1>');
+      document.write('D-day: (' + result + '일) 남았습니다.');
+      //#endregion
+    </script>
+  </head>
+  <body></body>
+</html>

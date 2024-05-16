@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getTodayLabel() {
+        var week = new Array(
+          '일요일',
+          '월요일',
+          '화요일',
+          '수요일',
+          '목요일',
+          '금요일',
+          '토요일'
+        );
+        var today = new Date().getDay();
+        var todayLabel = week[today];
+        return todayLabel; //배열 인덱스
+        //위의 return은 두 가지 의미가 있다.
+        //1.함수를 빠져나간다.
+        //2.값을 빠져나가서 값을 반환한다.(전달)
+      }
+      console.log(getTodayLabel());
+
+      function getInputDayLabel() {
+        var week = new Array(
+          '일요일',
+          '월요일',
+          '화요일',
+          '수요일',
+          '목요일',
+          '금요일',
+          '토요일'
+        );
+        var today = new Date('2002-04-30').getDay();
+        var todayLabel = week[today];
+        return todayLabel;
+      }
+      console.log(getInputDayLabel);
+      
+      
+      //연말까지 남은 날짜 구하기
+      var today = new Date();
+      var nowYear = today.getFullYear();
+
+      var theDate = new Date(nowYear, 11, 31);
+      var diffDate = theDate.getTime() - today.getTime();
+
+      var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+      document.write('연말 D-day: ' + result + '일 남았습니다.');
+    </script>
+  </head>
+  <body></body>
+</html>
