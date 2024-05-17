@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구구단 함수 사용해서 출력하기</title>
+    <script>
+      // for(var i = 3; i <= 9; i++) {
+      //     for(var j = 1; j <= 9; j++)
+      //     document.write(i + j '=','<br>');
+      // }
+
+      //   function gugudan() {
+      //     for (let i = 3; i <= 8; i++) {
+      //       console.log(`\n${i}단:`);
+      //       for (let j = 1; j <= 9; j++) {
+      //         console.log(`${i} x ${j} = ${i * j}`);
+      //       }
+      //     }
+      //   }
+
+      //   gugudan();
+    //   let num1 = Number(prompt('몇 단에서: ', 0));
+    //   let num2 = Number(prompt('몇 단까지 출력: ', 0));
+
+    //   if (num1 !== num2) {
+    //     if (num1 < num2) {
+    //       GuGuDan(num1, num2);
+    //     } else {
+    //       GuGuDan(num2, num1);
+    //     }
+    //   } else {
+    //     alert('두 숫자는 같을 수 없습니다.');
+    //   }
+    //   function GuGuDan(i, j) {
+    //     //i=num1, j=num2
+    //     for (let k = i; k <= j; k++) {
+    //       for (let g = 1; g < 10; g++) {
+    //         console.log(k, 'x', g, '=', k * g, '<br>');
+    //       }
+    //       console.log('<br>');
+    //     }
+    //   }
+    // </script>
+    <script>
+      const num = prompt('1 ~ 9까지의 숫자 중 하나를 입력하세요.');
+      let result = '';
+
+      for (let i = 1; i <= 9; i++) {
+        result += i * num + ' ';
+      }
+
+      console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>

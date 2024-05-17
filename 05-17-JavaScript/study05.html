@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let bookinfo = new Object();
+      bookinfo.name = '이름 : Nature of Code';
+      bookinfo.price = '가격 : 30000';
+      bookinfo.writer = '저자 : Deniel Shifman';
+      bookinfo.isbm = 'ISBM : 9788968481901';
+      bookinfo.page = '페이지 : 620';
+      console.log(bookinfo.name);
+      console.log(bookinfo.price);
+      console.log(bookinfo.writer);
+      console.log(bookinfo.isbm);
+      console.log(bookinfo.page);
+    </script>
+    <script>
+      let data = new Object();
+      data.name = '이름'  '미네랄'  '가스'  '보급품';
+      data.name1 = '일벌레'  50   0   1;
+      data.name2 = '여왕'  150  0  2;
+      data.name3 = '바퀴'  75  25  2;
+      data.name4 = '히드라디스크'  100  50  2;
+      data.name5 = '타락귀'  150  100  2;
+      console.log(data.name);
+      console.log(data.name1);
+      console.log(data.name2);
+      console.log(data.name3);
+      console.log(data.name4);
+      console.log(data.name5);
+    </script>
+    <script>
+      //최고의 점수를 받은 학생명을 출력하여라. 메서드를 이용해서 출력 리터럴로 생성해서 출력
+      let studentScore = [
+        { studentName: '홍길동', score: 65 },
+        { studentName: '이순신', score: 75 },
+        { studentName: '고길동', score: 83 },
+        { studentName: '유관순', score: 67 },
+        { studentName: '홍길순', score: 65 },
+      ];
+      let max = 0;
+      let scoreMax = '';
+      for (let i = 0; i < studentScore.length; i++) {
+        if (studentScore[i].score > max) {
+          max = studentScore[i].score;
+          scoreMax[i].studentName;
+        }
+      }
+      console.log(studentMax);
+      let studentName = prompt('최고의 점수를 받은 학생은?', '');
+    </script>
+  </head>
+  <body></body>
+</html>

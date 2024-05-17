@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	let num = 0;
+	function testFnc(){
+		num++;
+		console.log(num, "<br>");
+		if(num == 10) return;
+
+		testFnc();
+	}
+	
+	testFnc();
+</script>
+<script>
+	let output = isOdd(17);
+	console.log(output); // --> true
+	output = isOdd(-8);
+	console.log(output); // --> false
+
+	function isOdd(num) {
+		if(num === 0){
+			return false;
+		}else if(num === 1){	
+			return true;
+		}
+		//여기까지가 base case
+		if(num < 0){
+			return isOdd(-num)
+		}
+		//음수일 경우 양수로 바꿔준다.
+		return isOdd(num - 2)
+		//return문이 recursive case
+	}
+
+	//재귀함수를 사용하는 이유
+	//1. 주어진 문제를 비슷한 구조의 더 작은 문제로 나눌 수 있는 경우(=코드 라인 수를 줄일 수 있다.)
+	//2. 중첩된 반복문이 많거나 반복문 중첩횟수가 예측이 안되는 경우
+</script>
+<script>
+	function myFnc() {
+		alert("전역 함수");
+	}
+	function outerFnc() {
+		function myFnc() {
+			alert("지역 함수");
+		}
+		myFnc();
+	}
+	outerFnc();
+	myFnc();
+</script>
+</head>
+<body>
+</body>
+</html>

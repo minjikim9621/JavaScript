@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성 방법</title>
+    <script>
+        //js에서 객체를 생성하는 방법은 여러가지가 있다.
+        //첫 번째 : 리터럴 - 가장 일반적인 방법,중괄호를 사용하여 객체를 생성하는 방법
+        var person = {
+            name : "victorlee",
+            email : "ade@example.com",
+            birth : "0225"
+        }
+        //위와 같이 정의한 person은 name,email,birth 프로퍼티(속성)를 갖는 객체이다.
+        //리터럴 방식으로 객체를 정의할 때는 중괄호{} 안에 '프로퍼티:값'의 한 쌍으로 입력하고
+        //쉼표로 프로퍼티를 구분한다.프로퍼티값으로 함수가 올 수도 있고,배열객체 등 자유롭게 올 수 있다.
+        console.log(person.name);
+        console.log(person.email);
+        console.log(person.birth);
+        
+        //두 번째 : Object() 생성자 함수를 이용하는 방법
+        var person2 = new Object();
+        person2.name = "minjikim";
+        person2.email = "ex@example.com";
+        person2.birth = "0621";
+        console.log(person2.name);
+        console.log(person2.email);
+        console.log(person2.birth);
+        //생성자 함수를 이용해서 객체를 생성하는 방법
+        function Person3(name,email,birth,walk)
+        {
+            this.name = name;
+            this.email = email;
+            this.walk = "직립보행";
+        }
+        let person4 = new Person3("victorlee","add@example.com");
+        let person5 = new Person3("wonyoungjang","cute@example.com");
+        consol.log(Person3.name + "" + Person3.email + "" + Person3.walk);
+        consol.log(Person3.name + "" + Person3.email + "" + Person3.walk);
+        //리터럴과 Object()로 객체를 생성하는 것과 달리 생성자 함수를 통해
+        //객체를 생성하면 같은 속성을 가진 객체를 여러 개 생성 할 수 있다.중요!!!
+    </script>
+</head>
+<body>   
+</body>
+</html>
