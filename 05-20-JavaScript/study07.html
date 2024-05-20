@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function money_change(){
+            let price = 1500;
+            let num = 3;
+            let pay = 10000;
+            let change;
+
+            change = pay - price * num;
+
+            document.getElementById("price").innerHTML = price;
+            document.getElementById("num").innerHTML = num;
+            document.getElementById("pay").innerHTML = pay;
+            document.getElementById("change").innerHTML = change;
+        }
+    </script>
+  </head>
+  <body>
+    <div style='border:solid 1px gray; padding:10px; margin-bottom:10px;'>
+    <p>-개당가격 :<span id='price'></span>원<br></p>
+    <p>-구매개수 :<span id='num'></span>개<br></p>
+    <p>-지불금액 :<span id='pay'></span>원<br></p>
+    <p><span id='change'></span>원<br></p>
+    </div>
+    <p>
+      <button onclick="money_change()">거스름돈 계산하기</button>
+    </p>
+  </body>
+</html>
