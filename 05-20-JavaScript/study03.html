@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script>
+      let arrNum = Number(prompt('숫자를 입력하세요', '<br>'));
+      for (let i = 0; i <= 10; i++) {
+        for (let j = 0; j <= 10; j++) {
+          if (i % 2 === 0) {
+            document.write("짝수입니다","<br>");
+          }
+        }
+      }
+    </script> -->
+    <!-- <script>
+      const numbers = [];
+      for (let i = 0; i < 10; i++) {
+        const inputNumber = parseInt(prompt('${i+1}번째 수를 입력하세요: '));
+        numbers.push(inputNumber);
+      }
+
+      //홀수와 짝수를 판별하여 출력
+      const evenNumbers = [];
+      const oddNumbers = [];
+      for (const number in numbers) {
+        if (number % 2 === 0) {
+          evenNumbers.push(number);
+        } else {
+          oddNumbers.push(number);
+        }
+      }
+      console.log('홀수 출력: ', oddNumbers);
+      console.log('짝수 출력: ', evenNumbers);
+    </script> -->
+
+
+    <script>
+        const numbers = [];
+        for (let i = 0; i < 10; i++) {
+          const num = parseInt(prompt('정수를 입력하세요: '));
+          numbers.push(num);
+        }
+  
+        //홀수와 짝수를 판별하여 출력
+        const evenNumbers = [];
+        const oddNumbers = [];
+        for (const number of numbers) {
+          if (number % 2 === 0) {
+            evenNumbers.push(number);
+          } else {
+            oddNumbers.push(number);
+          }
+        }
+        console.log('홀수 오름차순 출력: ', oddNumbers);
+        console.log('짝수 내림차순 출력: ', evenNumbers);
+      </script>
+  </head>
+  <body></body>
+</html>

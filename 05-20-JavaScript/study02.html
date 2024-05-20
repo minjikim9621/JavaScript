@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function generateRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min; //max-min + 1을 하는 이유:1부터 시작
+      } //배열 선언 및 랜덤값 삽입
+      const numbers = [];
+      for (let i = 0; i < 100; i++) {
+        numbers.push(generateRandomNumber(1, 100));
+      }
+
+      const numbers = [];
+      const sortedNumbers = generateRandomNumber(numbers);
+      console.log('원본 배열:', numbers);
+    </script>
+  </head>
+  <body></body>
+</html>

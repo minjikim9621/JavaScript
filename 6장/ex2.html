@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function turnOn(light){
+            light.setAttribute('src', './light_2.png');
+        }
+        function turnOff(light){
+            light.setAttribute('src', './light_1.png');
+        }
+    </script>
+</head>
+<body>
+    <img onmouseover='turnOn(this)'
+    onmouseout='turnOff(this)' src="./images/light_1.png" alt="">
+</body>
+</html>
