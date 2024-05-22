@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src='js/jquery.js'></script>
+    <style>
+      /*  바디요소에 색상은 #ecd1d1로 하고 글꼴은 Arial 높이는 2000px로 지정  */
+      body {
+        background-color: #ecd1d1;
+        font-family: 'Arial', 돋움;
+        height: 2000px;
+      }
+      ul#menu {
+        position: fixed;
+        top: 20px;
+        left: 0px;
+        z-index: 9999;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      ul#menu li {
+        width: 100px;
+        margin-bottom: 2px;
+      }
+      ul#menu li a {
+        /* background-color: #ccc; */
+        color: #ccc;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0 10px 10px;
+        margin-left: -1px;
+        opacity: 0.6;
+        border-radius: 80px;
+      }
+      ul#menu .name1 {
+        background-color:black;
+      }
+      ul#menu .name2 {
+        background-color: aqua;
+      }
+      ul#menu .name3 {
+        background-color: blueviolet;
+      }
+      ul#menu .name4 {
+        background-color: cadetblue;
+      }
+      ul#menu .name5 {
+        background-color: chartreuse;
+      }
+      ul#menu .name6 {
+        background-color: crimson;
+      }
+      ul#menu .name7 {
+        background-color: tomato;
+      }
+      ul#menu .name8 {
+        background-color: yellow;
+      }
+    </style>
+    <script>
+      // 콜백함수 : 스스로 호출된다.바디요소가 먼저 로딩된 다음 호출된다.
+     /* $(function (){
+      $('#menu').css('marginLeft', '-85px');
+    }) */
+    // $(document).ready(
+    //   function(){
+    //     $("#menu").animate({
+    //       marginLeft : "-85px",
+    //     });
+    //   },
+    //   500,
+    //   'swing'
+    // );
+    $(function( ) {
+    $("#menu .woori1,.woori2,.woori3,.woori4,.woori5,.woori6,.woori7,.woori8").hover(function( ) {
+      $(this).animate({marginLeft:"0px"});
+    },
+    function( ) {
+      $(this).animate({"marginLeft" : "85px"});  
+    });
+  });
+    </script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="woori1"><a href="" class='name1'>Wooricom</a></li>
+      <li class="woori2"><a href="" class='name2'>Wooricom</a></li>
+      <li class="woori3"><a href="" class='name3'>Wooricom</a></li>
+      <li class="woori4"><a href="" class='name4'>Wooricom</a></li>
+      <li class="woori5"><a href="" class='name5'>Wooricom</a></li>
+      <li class="woori6"><a href="" class='name6'>Wooricom</a></li>
+      <li class="woori7"><a href="" class='name7'>Wooricom</a></li>
+      <li class="woori8"><a href="" class='name8'>Wooricom</a></li>
+    </ul>
+  </body>
+</html>
