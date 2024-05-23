@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: burlywood;
+        border-radius: 50%;
+        transition: transform 2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: medium;
+        position: relative; /* Add position relative */
+      }
+      .circle a {
+        text-decoration-line: none;
+        color: #eee;
+        position: absolute; /* Add position absolute */
+      }
+    </style>
+    <script>
+      $(function () {
+        const circles = $('.circle');
+
+        // 버블 정렬 함수
+        function bubbleSort(arr) {
+          const len = arr.length;
+          for (let i = 0; i < len; i++) {
+            for (let j = 0; j < len - 1; j++) {
+              if (arr[j] > arr[j + 1]) {
+                const temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+              }
+            }
+          }
+          return arr;
+        }
+
+        // 각 원의 크기를 무작위로 설정
+        const sizes = [];
+        for (let i = 0; i < circles.length; i++) {
+          sizes.push(Math.floor(Math.random() * 100) + 50); // 50에서 150 사이의 무작위 값
+        }
+
+        // 각 원의 크기를 버블 정렬을 사용하여 정렬
+        const sortedSizes = bubbleSort(sizes);
+
+        // 각 원에 대해 크기 적용
+        circles.each(function (index) {
+          $(this).css('width', sortedSizes[index] + 'px');
+          $(this).css('height', sortedSizes[index] + 'px');
+
+          // 메뉴 링크 추가
+          const circle = $(this);
+          for (let i = 0; i < 3; i++) {
+            const angle = (Math.PI * 2 * i) / 3;
+            const x = sortedSizes[index] / 2 + Math.cos(angle) * sortedSizes[index] * 0.35;
+            const y = sortedSizes[index] / 2 + Math.sin(angle) * sortedSizes[index] * 0.35;
+            circle.append(`<a href="#" style="left:${x}px; top:${y}px;">menu</a>`);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class='circle'></div>
+    <div class='circle'></div>
+    <div class='circle'></div>
+  </body>
+</html>

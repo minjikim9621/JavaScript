@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouseover Text Box with jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .sv_list {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .sv_list .wishlist {
+        visibility: hidden;
+        width: 120px;
+        background-color: aliceblue;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .sv_list:hover .wishlist {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('.sv_list').hover(function(){
+            $(this).find('.wishlist').css('visibility', 'visible').css('opacity', '1');
+        }, function(){
+            $(this).find('.wishlist').css('visibility', 'hidden').css('opacity', '0');
+        });
+    });
+</script>
+</head>
+<body>
+
+    <h2>아이템에 마우스를 올리면 설명 출력</h2>
+    <hr>
+    <p class='sv_list'>여름방학 때 하고 싶은 것들<span class='wishlist'>연습문제풀기</span></p>
+
+</body>
+</html>

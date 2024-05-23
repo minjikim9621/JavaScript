@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+      body {
+        display: flex;
+        margin: 30%;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: burlywood;
+        border-radius: 50%;
+        transition: transform 2s ease;
+      }
+      .circle p {
+        font-size: medium;
+        text-align: center;
+        line-height: normal;
+      }
+      .circle a {
+        text-decoration-line: none;
+        color: #eee;
+      }
+    </style>
+    <script>
+      $(function () {
+        $('#rnd1').on({
+          mouseover: function () {
+            $('.circle').css('transform', 'scale(2.5)');
+          },
+          mouseout: function () {
+            $('.circle').css('transform', 'scale(1)');
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="rnd1" class='circle'></div>
+      <p><a href="#">menu</a></p>
+      <p><a href="#">menu</a></p>
+      <p><a href="#">menu</a></p>
+  </body>
+</html>
