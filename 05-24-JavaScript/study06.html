@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 input값 복사해서 배송지정보에 그대로 옮기기</title>
+    <script src='js/jquery.js'></script>
+    <script>
+        function check(n){
+            if (n.checked) {
+        document.getElementById('homeaddress').value = document.getElementById('memberaddress').value;
+        document.getElementById('phonenumber').value = document.getElementById('memberphone').value;
+    
+    } else {
+        document.getElementById('homeaddress').value = '';
+        document.getElementById('phoneaddress').value = '';
+    }
+};
+        </script>
+</head>
+<body>
+    <div>
+        <p>회원정보</p>
+        <label>주소<input type="address" class='memberaddress' value='서울시 강남구'></label><br>
+        <label>전화번호<input type="tel" class='memberphone' value='010-1234-5678'></label>
+    </div>
+    <hr>
+    <p>동일<input type="checkbox" name="same" id='same' onclick='check(this)'></p>
+    <hr>
+    <div>
+        <p>배송지정보</p>
+        <label>주소<input type="text" class='homeaddress' value='' ></label><br>
+        <label>전화번호<input type="text" class='phonenumber' value='' ></label>
+    </div>
+</body>
+</html>

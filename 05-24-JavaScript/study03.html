@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+      $("#memo").keyup(function(e) {
+        var text = $(this).val();
+        $('#count').text('입력문자수: ' + content.length);
+      });
+    //   document.querySelector('textarea[]').value.length;
+    </script>
+  </head>
+  <body>
+    <h2>글자수 세기</h2>
+    <div>
+      <textarea id='memo'
+        style="height: 200px; width: 150px; border: 3px solid blue"
+      ></textarea>
+      <h4 id="count">입력문자수:</h4>
+    </div>
+  </body>
+</html>

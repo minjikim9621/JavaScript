@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연산값,총합,총가격값 구하기</title>
+    <script src="js/jquery.js"></script>
+    <script>
+      function sum() {
+        var num1 = document.getElementById('num1').value;
+        var num2 = document.getElementById('num2').value;
+        var result = parseInt(num1) + parseInt(num2);
+
+        document.getElementById('result').value = result;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="num1" id="num1" value="10" />+
+      <input type="text" name="num2" id="num2" value="20" />=
+      <input type="text" name="result" id="result" value="" />
+      <button onclick="sum()">연산</button>
+    </div>
+
+    <div>
+      <label>가격<input type="text" name="price" id='price' value="2500" /></label>X 수량
+      <select id="quantity">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <p>총합: <span id='total'></span></p>
+    </div>
+
+    <div>
+      <p>
+        <input type="checkbox" name="banana" value="" />바나나(1000원)<br />
+        <input type="checkbox" name="apple" value="" />사과(500원)<br />
+        <input type="checkbox" name="pair" value="" />배(1500원)
+      </p>
+      <button onclick="">총합구하기</button>
+      <p>선택한 총가격:</p>
+    </div>
+  </body>
+</html>

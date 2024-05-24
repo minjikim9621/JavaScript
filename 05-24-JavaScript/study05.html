@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스 전체선택하기</title>
+    <script src='js/jquery.js'></script>
+    <script>
+        function check(n){
+            var lang = document.querySelectorAll('.lang');
+            for(var i = 0; i < lang.length; i++){
+                lang[i].checked = n.checked;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <input type="checkbox" name="all" onclick=check(this)>전체선택<br>
+        <input type="checkbox" name="java" class='lang'>java<br>
+        <input type="checkbox" name="sql" class='lang'>sql<br>
+        <input type="checkbox" name="angular" class='lang'>angular
+    </p>
+</body>
+</html>

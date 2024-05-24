@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폼으로 사각형 그리기</title>
+    
+    <script>
+    function draw(){
+    
+    var x=document.getElementById("x");
+    var y=document.getElementById("y");
+    var l=document.getElementById("l");
+    var w=document.getElementById("w");
+    var h=document.getElementById("h");    
+    var c=document.getElementById("c");    
+    
+    var canvas = document.getElementById("myCanvas")
+    var context = canvas.getContext("2d")
+    
+    context.beginPath();
+    context.rect(x.value,y.value,w.value,h.value);
+    context.lineWidth=l.value;
+    context.strokeStyle = c.value;
+    context.stroke();
+    }
+function erase(){
+    var canvas = document.getElementById("myCanvas")
+    var context = canvas.getContext("2d")
+    context.clearRect(0,0,canvas.width,canvas.height)
+    }
+
+    // function erase(){
+    //     if(canvas == null || context == null)
+    //     return;
+    // context.clearRect(0,0,canvas.width,canvas.height);
+    // }
+
+    //전역 변수 선언
+    // let canvas = null, context = null;
+    // window.onload = init; //웹 페이지가 모두 적재되어 출력된 후 발생하는 load 이벤트 처리, init() 함수 호출
+    // function init(){
+    //     canvas = document.getElementById("myCanvas");
+    //     context = canvas.getContext("2d");
+    // }
+
+    </script>
+</head>
+<body>
+   <h3>폼으로 사각형 그리기</h3>
+   <hr>
+   <form>
+    <table>
+        <tr>
+            <td>x</td>
+            <td><input type = "text" id = "x"></td>
+            <td>y</td>
+            <td><input type = "text" id = "y"></td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td><input type = "text" id = "w"></td>
+            <td>height</td>
+            <td><input type = "text" id = "h"></td>
+        </tr>
+        <tr>
+           <td>선굵기</td>
+            <td><input type = "text" id = "l"></td>
+            <td>선색</td>
+            <td><input type ="color" id = "c"></td>
+        </tr>
+        <tr>
+           <td colspan="2">
+           <input type="button" value = "그리기" id="p" onclick="draw()">
+           </td>
+           <td colspan="2">
+           <input type = "reset" value="지우기" id="r" onclick="erase()">
+           </td>
+        </tr>
+    </table>
+   </form>
+   <hr>
+   <canvas id = "myCanvas" width="500" height = "250"
+       style = "background-color: aliceblue">
+    </canvas>
+</body>
+</html>

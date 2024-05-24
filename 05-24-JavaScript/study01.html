@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>체크박스 결과값 출력하기</title>
+    <script src="js/jquery.js"></script>
+    <script>
+    $(function(){
+        $('.btn').click(function () {
+            $(".result").show("<p>야구 농구</p>")
+        });
+        var hb1 = $("#hobby :checked").val( );
+        console.log(hb1);
+        });
+    </script>
+  </head>
+  <body>
+    <p id="hobby">취미
+      <ul>
+        <li><input type="checkbox" name="hobby1" value="baseball" checked />야구</li>
+        <li><input type="checkbox" name="hobby2" value="basketball" checked />농구</li>
+        <li><input type="checkbox" name="hobby3" value="game" />게임</li>
+      </ul>
+    </p>
+    <button class="btn">결과보기</button>
+    <p class='result'>결과값: </p>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input에 숫자 저장후 출력하기</title>
+    <script src='js/jquery.js'></script>
+    <script>
+        var arr = [];
+        function save(){
+            var sum = document.querySelector("#sum").value;
+            arr.push(sum);
+            list();
+        }
+        function list(){
+            var result= document.querySelector("#result");
+            var mesg = "";
+        for(var i = 0; i < arr.length; i++){
+            mesg = mesg + arr[i] + "<br>";
+        }
+        result.innerHTML = mesg;
+        }
+    </script>
+</head>
+<body>
+    값:<input type="search" name="sum" id="sum" value='3'>
+    <button onclick='save()'>저장</button>
+    <div id='result'></div>
+</body>
+</html>

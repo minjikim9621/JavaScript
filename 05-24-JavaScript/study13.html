@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼 만들고 이벤트값 해지하기</title>
+    <script src="js/jquery.js"></script>
+    <script>
+      $(function () {
+        $('.btn1').on('mouseover', function () {
+          alert('HELLO!');
+        });
+        $(document).on('mouseover', '.btn2', function () {
+          alert('WELCOME!');
+        });
+        var btn2 = $('<p><button class="btn2">버튼2</button></p>');
+        $('#wrap').append(btn2);
+
+        $('.btn1_1').on('click', function () {
+          $('.btn_1').off('mouseover');
+        });
+        $('.btn2_1').on('click', function () {
+          $(document).off('mouseover', '.btn2');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id='wrap'>
+      <button class="btn1">버튼1</button>
+    </div>
+    <button class="btn1_1">버튼1 이벤트 해지</button>
+    <button class="btn2_1">버튼2 이벤트 해지</button>
+  </body>
+</html>

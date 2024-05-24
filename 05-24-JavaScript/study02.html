@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery.js"></script>
+    <script>
+      function show() {
+        var arr = document.querySelectorAll("input[name='hobby']");
+        //체크 박스 네임명을 다 찾아서 arr 배열에 넘긴다.
+        var str = '';
+        for (var i = 0; i < arr.length; i++) {
+          var c = arr[i]; // 3번 돌때마다 배열의 인덱스 값을 변수 c에 대입
+          if (c.checked) {
+            // 체크가 되었다면....
+            str += c.value + '<br>'; //체크된 것들을 str 변수에 넘김
+          }
+        }
+        document.getElementById('result').innerHTML = '<h1>' + str + '</h1>';
+      }
+    </script>
+  </head>
+  <body>
+    취미<br />
+    <ul>
+      <li>야구<input type="checkbox" name="hobby" value="야구" /></li>
+      <li>농구<input type="checkbox" name="hobby" value="농구" /></li>
+      <li>게임<input type="checkbox" name="hobby" value="게임" /></li>
+    </ul>
+    <button onclick="show()">결과보기</button><br />
+    결과값:
+    <div id="result"></div>
+  </body>
+</html>

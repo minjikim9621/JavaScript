@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/jquery.js'></script>
+    <script>
+        var childWin;
+        function newOpen(){
+            childWin = window.open('openpage.html',"",'width=400,height=400');
+        }
+        function newClose(){
+            childWin.close();
+        }
+        function nowClose(){
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick='newOpen'>새창 열기</button><br>
+    <button onclick='newClose'>새창 닫기</button><br>
+    <button onclick='nowClose'>현재창(부모창) 닫기</button>
+</body>
+</html>
