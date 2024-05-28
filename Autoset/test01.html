@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+      $(function () {
+        $('.btn_col').click.css({
+          'background-color': green,
+        });
+      });
+
+      $(function () {
+        $('.gallery_wrap').bxSlider({
+          auto: true,
+          autoControls: true,
+          stopAutoOnClick: true,
+          pager: true,
+        });
+      });
+    </script>
+    <style>
+      table .tb1 .tb2 {
+        background-color: black;
+        color: white;
+
+        .gallery_wrap {
+          margin: 0 auto;
+          width: 640px;
+        }
+      }
+      .spaceA {
+        width: 300px;
+        height: 300px;
+        filter: drop-shadow(10px 6px 6px #c3c3c3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg_color">
+      <button onclick="btn" class="btn_col">버튼</button>
+    </div>
+
+    <table border="1" width="50%">
+      <tr>
+        <td>이름</td>
+        <td>주소</td>
+      </tr>
+      <tr>
+        <td class="tb1">홍길동</td>
+        <td class="tb2">서울시</td>
+      </tr>
+      <tr>
+        <td>이순신</td>
+        <td>제주시</td>
+      </tr>
+      <tr>
+        <td>왕건</td>
+        <td>경기도</td>
+      </tr>
+    </table>
+    <div>
+      <img src="images/spaceA.png" alt="스페이스A" class="spaceA" />
+      <button onclick="btn_shadow">버튼</button>
+    </div>
+
+    <div id="wrap">
+      <ul class="gallery_wrap">
+        <li><img src="images/1.jpg" alt="사진1" /></li>
+        <li><img src="images/2.jpg" alt="사진2" /></li>
+        <li><img src="images/3.jpg" alt="사진3" /></li>
+        <li><img src="images/4.jpg" alt="사진4" /></li>
+        <li><img src="images/5.jpg" alt="사진5" /></li>
+        <li><img src="images/6.jpg" alt="사진6" /></li>
+        <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+      </ul>
+    </div>
+  </body>
+</html>

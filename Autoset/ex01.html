@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/jquery.js'></script>
+    <script>
+        function btnPlay(){
+            let video = document.getElementById("myPlayer");
+            video.play();
+        }
+        function btnPause(){
+            let video = document.getElementById("myPlayer");
+            video.pause();
+        }
+        function btnReplay(){
+            let video = document.getElementById("myPlayer");
+            video.currentTime = 0;
+            video.replay();
+        }
+        function vol_down(){
+            let video = document.getElementById("myPlayer");
+            video.volume = 0;
+        }
+        function vol_up(){
+            let video = document.getElementById("myPlayer");
+            video.volume = 1;
+        }
+    </script>
+</head>
+<body>
+    <h1>자바스크립트로 비디오 제어</h1>
+    <hr>
+    <video id = "myPlayer" src="player/bear.mp4" width='500' height='250'></video>
+    <div>
+        <p></p>
+        <button onclick='btnPlay()'>play</button>
+        <button onclick='btnPause()'>pause</button>
+        <button onclick='btnReplay()'>replay</button>
+        <button onclick='vol_down()'>vol-</button>
+        <button onclick='vol_up()'>vol+</button>
+        <button onclick='btn_mute()'>mute on/off</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#del').click(function () {
+          $('h2').removeClass('title1');
+        });
+      });
+    </script>
+    <style>
+      h2 {
+        background-color: pink;
+        color: white;
+      }
+      p {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+      <h2 class="title1">제목 1</h2>
+      <p>단락 1</p>
+      <h2 class="title1">제목 2</h2>
+      <p>단락 2</p>
+      <button id="del">pink 클래스 삭제하기</button>
+  </body>
+</html>

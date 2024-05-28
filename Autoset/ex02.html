@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src='js/jquery.bxslider.min.js'></script>
+    <script>
+      $(function () {
+        $('.gallery_wrap').bxSlider({
+            auto:true,
+            pager:true,
+            speed:50
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+        <ul class='gallery_wrap'>
+            <li><img src="images/1.jpg" alt="사진1" /></li>
+            <li><img src="images/2.jpg" alt="사진2" /></li>
+            <li><img src="images/3.jpg" alt="사진3" /></li>
+            <li><img src="images/4.jpg" alt="사진4" /></li>
+            <li><img src="images/5.jpg" alt="사진5" /></li>
+            <li><img src="images/6.jpg" alt="사진6" /></li>
+        </ul>
+    </div>
+  </body>
+</html>

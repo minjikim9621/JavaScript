@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+    function q1(){
+        let txt = $(".text1").val();
+        if(txt == ''){
+            alert("입력하세요!")
+        }else("txt")
+    }
+
+      function q2() {
+        $('.email').val();
+        if (email.includes('@')) {
+          let domain = email.split('@')[1].split('.')[0];
+          alert(domain);
+        } else {
+          alert('이메일이 아닙니다.');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class='wrap1'>
+      <h1>1. 빈칸 체크 함수 만들기</h1>
+      <p>1-1. 버튼을 눌렀을 때 입력한 글자로 alert 띄우기</p>
+      <p>
+        [완성본]1-2. 버튼을 눌렀을 때 칸에 아무것도 없으면 "입력하세요!" alert
+        띄우기
+      </p>
+      <input type="text" name="" class="text1" />
+      <button onclick="q1">클릭</button>
+    </div>
+    <hr />
+    <div class='wrap2'>
+      <h1>2. 이메일 판별 함수 만들기</h1>
+      <p>2-1. 버튼을 눌렀을 때 입력받은 이메일로 alert 띄우기</p>
+      <p>
+        2-2. 이메일이 아니면(@가 없으면) '이메일이 아닙니다'라는 alert 띄우기
+      </p>
+      <p>[완성본]2-3. 이메일 도메인만 alert 띄우기</p>
+      <input type="text" name="" class="email" />
+      <button onclick="q2">클릭</button>
+    </div>
+    <hr />
+    <div class='wrap3'>
+        <h1>3. HTML 붙이기/지우기 연습</h1>
+        <p>3-1. 이름을 입력하면 아래 나오게 하기</p>
+        <p>[완성본]3-2. 다지우기 버튼을 만들기</p>
+        <input type="text" name="" class="name" placeholder="여기에 이름을 입력" />
+        <button onclick="q3">이름 붙이기</button>
+        <button onclick="q3_remove">다 지우기</button>
+    </div>
+  </body>
+</html>
