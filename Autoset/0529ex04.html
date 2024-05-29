@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/jquery.js'></script>
+    <script>
+        function checkSpecialCharacters(event) {
+            const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+            if (specialCharPattern.test(event.key)) {
+                event.preventDefault();
+                alert("특수문자는 입력할 수 없습니다.");
+            }
+        }
+
+        function checkSingleQuote(event) {
+            if (event.key === "'") {
+                event.preventDefault();
+                alert("홑따옴표는 입력할 수 없습니다.");
+            }
+        }
+
+        function checkSingleQuote(event) {
+            if (event.key === "text") {
+                event.preventDefault();
+                alert("문자는 입력할 수 없습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>키보드 입력값 체크하기...</h1>
+    
+    <label for="textArea">텍스트를 입력하세요 (특수문자 금지):</label>
+    <textarea id="textArea" rows="4" cols="50" onkeypress="checkSpecialCharacters(event)"></textarea> 
+   
+    <label for="inputField">"홑따옴표를 입력할 수 없습니다."</label>
+    <input type="text" id="inputField" onkeypress="checkSingleQuote(event)">
+    
+    
+    <label for="inputField">"숫자만 입력하세요."</label>
+    <input type="number" id="inputField" onkeypress="checkText(event)">
+</body>
+</html>
